@@ -20,8 +20,8 @@ modules:
       - -DPODOFO_BUILD_LIB_ONLY=1
     sources:
       - type: archive
-        url: https://datapacket.dl.sourceforge.net/project/podofo/podofo/0.9.6/podofo-0.9.6-rc1.tar.gz
-        sha256: ce7a8acd7e127c9529bbf26f174583177b70e100aa356afc323c7677a3827c92
+        url: https://datapacket.dl.sourceforge.net/project/podofo/podofo/0.9.6/podofo-0.9.6.tar.gz
+        sha256: e9163650955ab8e4b9532e7aa43b841bac45701f7b0f9b793a98c8ca3ef14072
     cleanup:
       - /include
       - /lib/pkgconfig
