@@ -33,5 +33,5 @@ modules:
       - -DCMAKE_BUILD_TYPE=Release
     sources:
       - type: archive
-        url: https://gitlab.com/scarpetta/pdfmixtool/-/archive/v0.3.3/pdfmixtool-v0.3.3.tar.gz
-        sha256: 3bac24930d5624f79f50d43c7deadcbf6c18847f707e83a65c1a1e80baa84072
+        url: https://gitlab.com/scarpetta/pdfmixtool/-/archive/v0.3.4/pdfmixtool-v0.3.4.tar.gz
+        sha256: 0c988d7092150945d3e4d491234141efcf823e8048e607bdea7e59e9f220c06b
