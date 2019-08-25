@@ -9,6 +9,20 @@ finish-args:
   - --socket=wayland
   - --device=dri
 modules:
+  - name: qpdf
+    buildsystem: simple
+    build-commands:
+      - "./configure --prefix=/ --disable-static"
+      - "make -j $FLATPAK_BUILDER_N_JOBS"
+      - "make DESTDIR=$FLATPAK_DEST install"
+    sources:
+      - type: archive
+        url: https://github.com/qpdf/qpdf/releases/download/release-qpdf-8.4.2/qpdf-8.4.2.tar.gz
+        sha256: 69a30a65ef9398e6dbf151f1f6a31321cbc0f49b6cc0689ce10ea958bfd13ec3
+    cleanup:
+      - /include
+      - /bin
+
   - name: podofo
     buildsystem: cmake-ninja
     config-opts:
@@ -33,5 +47,5 @@ modules:
       - -DCMAKE_BUILD_TYPE=Release
     sources:
       - type: archive
-        url: https://gitlab.com/scarpetta/pdfmixtool/-/archive/v0.3.4/pdfmixtool-v0.3.4.tar.gz
-        sha256: 93a03cbe017ebd23f241724c6366c903bc4f95f7786eaf800fdae5f1817516a1
+        url: https://gitlab.com/scarpetta/pdfmixtool/-/archive/v0.4/pdfmixtool-v0.4.tar.gz
+        sha256: 25dc4e3c51929e6ea331a4a544153c3d4a669bd3b57471fc4f3072a782655ae6
