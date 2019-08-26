@@ -47,5 +47,5 @@ modules:
       - -DCMAKE_BUILD_TYPE=Release
     sources:
       - type: archive
-        url: https://gitlab.com/scarpetta/pdfmixtool/-/archive/39ecc41aadc9316454b048849eb993bba7be9f89/pdfmixtool-39ecc41aadc9316454b048849eb993bba7be9f89.tar.gz
-        sha256: ac04ed282628cd9d09002ab49e1feb5f619d349d5277be51f787fad457ebb8f7
+        url: https://gitlab.com/scarpetta/pdfmixtool/-/archive/07777faa222960dd8bc58bf9594e19924def4b5f/pdfmixtool-07777faa222960dd8bc58bf9594e19924def4b5f.tar.gz
+        sha256: 8a893cedb96a44755875ce157cf8ebe7b6034c1ba3a64696633266fc6f488a81
