@@ -1,6 +1,6 @@
 app-id: eu.scarpetta.PDFMixTool
 runtime: org.kde.Platform
-runtime-version: 5.12
+runtime-version: "5.13"
 sdk: org.kde.Sdk
 command: pdfmixtool
 finish-args:
@@ -17,8 +17,8 @@ modules:
       - "make DESTDIR=$FLATPAK_DEST install"
     sources:
       - type: archive
-        url: https://github.com/qpdf/qpdf/releases/download/release-qpdf-8.4.2/qpdf-8.4.2.tar.gz
-        sha256: 69a30a65ef9398e6dbf151f1f6a31321cbc0f49b6cc0689ce10ea958bfd13ec3
+        url: https://github.com/qpdf/qpdf/releases/download/release-qpdf-9.1.0/qpdf-9.1.0.tar.gz
+        sha256: 3abbbb7907f2e750336b9c97e67b6e806aca91ab537402ec080656d63940ed79
     cleanup:
       - /include
       - /bin
@@ -34,7 +34,7 @@ modules:
       - -DPODOFO_BUILD_LIB_ONLY=1
     sources:
       - type: archive
-        url: https://datapacket.dl.sourceforge.net/project/podofo/podofo/0.9.6/podofo-0.9.6.tar.gz
+        url: https://downloads.sourceforge.net/podofo/podofo-0.9.6.tar.gz
         sha256: e9163650955ab8e4b9532e7aa43b841bac45701f7b0f9b793a98c8ca3ef14072
     cleanup:
       - /include
@@ -47,5 +47,5 @@ modules:
       - -DCMAKE_BUILD_TYPE=Release
     sources:
       - type: archive
-        url: https://gitlab.com/scarpetta/pdfmixtool/-/archive/07777faa222960dd8bc58bf9594e19924def4b5f/pdfmixtool-07777faa222960dd8bc58bf9594e19924def4b5f.tar.gz
-        sha256: 8a893cedb96a44755875ce157cf8ebe7b6034c1ba3a64696633266fc6f488a81
+        url: https://gitlab.com/scarpetta/pdfmixtool/-/archive/c94446152d2de64c0b2260189dcf783272f76d10/pdfmixtool-c94446152d2de64c0b2260189dcf783272f76d10.tar.gz
+        sha256: 7162083975ddaec60aebbdbb3ff459d1fe8e9112caaf341501a303b90ff73075
