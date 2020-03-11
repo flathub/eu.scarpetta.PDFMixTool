@@ -1,6 +1,6 @@
 app-id: eu.scarpetta.PDFMixTool
 runtime: org.kde.Platform
-runtime-version: "5.13"
+runtime-version: "5.14"
 sdk: org.kde.Sdk
 command: pdfmixtool
 finish-args:
@@ -17,8 +17,8 @@ modules:
       - "make DESTDIR=$FLATPAK_DEST install"
     sources:
       - type: archive
-        url: https://github.com/qpdf/qpdf/releases/download/release-qpdf-9.1.0/qpdf-9.1.0.tar.gz
-        sha256: 3abbbb7907f2e750336b9c97e67b6e806aca91ab537402ec080656d63940ed79
+        url: https://github.com/qpdf/qpdf/releases/download/release-qpdf-9.1.1/qpdf-9.1.1.tar.gz
+        sha256: a2c6fc410ec45df0ca0996b039e00bb6f39cfc76d42d784b7ad7bc9e163f4236
     cleanup:
       - /include
       - /bin
@@ -47,5 +47,5 @@ modules:
       - -DCMAKE_BUILD_TYPE=Release
     sources:
       - type: archive
-        url: https://gitlab.com/scarpetta/pdfmixtool/-/archive/c94446152d2de64c0b2260189dcf783272f76d10/pdfmixtool-c94446152d2de64c0b2260189dcf783272f76d10.tar.gz
-        sha256: 7162083975ddaec60aebbdbb3ff459d1fe8e9112caaf341501a303b90ff73075
+        url: https://gitlab.com/scarpetta/pdfmixtool/-/archive/v0.5-beta/pdfmixtool-v0.5-beta.tar.gz
+        sha256: a2acf118cd088b4c9f260e509d47462256b97468fdb39c3e5d25b35e4a0275b9
