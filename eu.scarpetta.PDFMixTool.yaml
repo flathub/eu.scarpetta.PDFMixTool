@@ -8,6 +8,7 @@ finish-args:
   - --socket=x11
   - --socket=wayland
   - --device=dri
+  - --filesystem=host
 modules:
   - name: qpdf
     buildsystem: simple
@@ -17,35 +18,18 @@ modules:
       - "make DESTDIR=$FLATPAK_DEST install"
     sources:
       - type: archive
-        url: https://github.com/qpdf/qpdf/releases/download/release-qpdf-9.1.1/qpdf-9.1.1.tar.gz
-        sha256: a2c6fc410ec45df0ca0996b039e00bb6f39cfc76d42d784b7ad7bc9e163f4236
+        url: https://github.com/qpdf/qpdf/releases/download/release-qpdf-10.0.1/qpdf-10.0.1.tar.gz
+        sha256: 5d2277c738188b7f4e3f01a6db7f2937ed6df54671f1fba834cd3d7ff865827b
     cleanup:
       - /include
       - /bin
-
-  - name: podofo
-    buildsystem: cmake-ninja
-    config-opts:
-      - -DPODOFO_BUILD_SHARED=1
-      - -DPODOFO_BUILD_STATIC=0
-      - -DPODOFO_HAVE_JPEG_LIB=1
-      - -DPODOFO_HAVE_PNG_LIB=1
-      - -DPODOFO_HAVE_TIFF_LIB=1
-      - -DPODOFO_BUILD_LIB_ONLY=1
-    sources:
-      - type: archive
-        url: https://downloads.sourceforge.net/podofo/podofo-0.9.6.tar.gz
-        sha256: e9163650955ab8e4b9532e7aa43b841bac45701f7b0f9b793a98c8ca3ef14072
-    cleanup:
-      - /include
-      - /lib/pkgconfig
-      - /lib/debug/source
 
   - name: pdfmixtool
     buildsystem: cmake-ninja
     config-opts:
       - -DCMAKE_BUILD_TYPE=Release
+      #- -DFLATPAK_BUILD=ON
     sources:
       - type: archive
-        url: https://gitlab.com/scarpetta/pdfmixtool/-/archive/beb6c70affc7c05320398595e2248f88284151d0/pdfmixtool-beb6c70affc7c05320398595e2248f88284151d0.tar.gz
-        sha256: 6341b443494a19e47d9ad390780f54b0f7e654aaf822c6fb5ab4ba2165f2dc59
+        url: https://gitlab.com/scarpetta/pdfmixtool/-/archive/v0.6/pdfmixtool-v0.6.tar.gz
+        sha256: a1d43d63e0981724434bb0db62ee91185d17e45402dbec8df1b2e34893ffc782
