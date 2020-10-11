@@ -33,3 +33,5 @@ modules:
       - type: archive
         url: https://gitlab.com/scarpetta/pdfmixtool/-/archive/v0.6/pdfmixtool-v0.6.tar.gz
         sha256: a1d43d63e0981724434bb0db62ee91185d17e45402dbec8df1b2e34893ffc782
+      - type: patch
+        path: appdata.patch

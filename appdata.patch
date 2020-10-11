@@ -1,0 +1,34 @@
+commit 01c7256220b42c29994b607f95dc1295abb623d6
+Author: Marco Scarpetta <marcoscarpetta02@gmail.com>
+Date:   Sun May 17 08:41:11 2020 +0200
+
+    Update appdata file
+
+diff --git a/resources/eu.scarpetta.PDFMixTool.appdata.xml b/resources/eu.scarpetta.PDFMixTool.appdata.xml
+index f34bdd7..299d50f 100644
+--- a/resources/eu.scarpetta.PDFMixTool.appdata.xml
++++ b/resources/eu.scarpetta.PDFMixTool.appdata.xml
+@@ -32,19 +32,19 @@
+   <screenshots>
+     <screenshot type="default">
+       <caption>Merge 3 PDF files</caption>
+-      <image>https://scarpetta.gitlab.io/pdfmixtool/merge_files.png</image>
++      <image>https://scarpetta.eu/pdfmixtool/merge_files.png</image>
+     </screenshot>
+     <screenshot>
+       <caption>Extract pages from a file</caption>
+-      <image>https://scarpetta.gitlab.io/pdfmixtool/extract_pages.png</image>
++      <image>https://scarpetta.eu/pdfmixtool/extract_pages.png</image>
+     </screenshot>
+     <screenshot>
+       <caption>Page composition (N-up)</caption>
+-      <image>https://scarpetta.gitlab.io/pdfmixtool/nup.png</image>
++      <image>https://scarpetta.eu/pdfmixtool/nup.png</image>
+     </screenshot>
+     <screenshot>
+       <caption>Alternate mix of PDF file</caption>
+-      <image>https://scarpetta.gitlab.io/pdfmixtool/alternate_mix.png</image>
++      <image>https://scarpetta.eu/pdfmixtool/alternate_mix.png</image>
+     </screenshot>
+   </screenshots>
+ 
