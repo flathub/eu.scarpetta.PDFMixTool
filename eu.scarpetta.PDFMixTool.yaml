@@ -18,8 +18,8 @@ modules:
       - "make DESTDIR=$FLATPAK_DEST install"
     sources:
       - type: archive
-        url: https://github.com/qpdf/qpdf/releases/download/release-qpdf-10.3.1/qpdf-10.3.1.tar.gz
-        sha256: d3e6b862098c6357d04390fd30d08c94aa2cf7a3bb2dcabd3846df5eb57367d6
+        url: https://github.com/qpdf/qpdf/releases/download/release-qpdf-10.3.2/qpdf-10.3.2.tar.gz
+        sha256: 062808c40ef8741ec8160ae00168638a712cfa1d4bf673e8e595ab5eba1da947
     cleanup:
       - /include
       - /bin
@@ -30,5 +30,5 @@ modules:
       - -DCMAKE_BUILD_TYPE=Release
     sources:
       - type: archive
-        url: https://gitlab.com/scarpetta/pdfmixtool/-/archive/695232db4fd7115b3687ace755e1283cf23a12ec/pdfmixtool-695232db4fd7115b3687ace755e1283cf23a12ec.tar.gz
-        sha256: ee4c9db79b1344f5d41073e3f00e83ae923ce250ccd1203f327d887ba94e0665
+        url: https://gitlab.com/scarpetta/pdfmixtool/-/archive/9a662942765bbec576413b0ea6d848baa4b52381/pdfmixtool-9a662942765bbec576413b0ea6d848baa4b52381.tar.gz
+        sha256: 65277c56ab9cfa0fa4c503e4951a97c9319759a2886ee1c43dfa9cc4ac731140
