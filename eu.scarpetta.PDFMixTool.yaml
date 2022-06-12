@@ -35,7 +35,7 @@ modules:
       - --with-png
       - --with-jpg
       - --with-gif
-      - --with-tif
+      - --with-tiff
     sources:
       - type: archive
         url: https://github.com/ImageMagick/ImageMagick7/archive/7.1.0-37.tar.gz
