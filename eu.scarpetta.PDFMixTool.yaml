@@ -24,6 +24,26 @@ modules:
       - /include
       - /bin
 
+  - name: imagemagick
+    buildsystem: cmake-ninja
+    config-opts:
+      - --enable-shared
+      - --disable-static
+      - --with-modules
+      - --with-x
+      - --with-threads
+      - --with-magick_plus_plus
+      - --with-png
+      - --with-jpg
+      - --with-gif
+      - --with-tif
+    sources:
+      - type: archive
+        url: https://github.com/ImageMagick/ImageMagick7/archive/7.1.0-37.tar.gz
+        sha256: a54888a1a46dbb808705a3e6c6b5ecb93ee30189a8ae6ea0f02300a0ab0d0996
+    cleanup:
+      - /share/doc
+
   - name: pdfmixtool
     buildsystem: cmake-ninja
     config-opts:
