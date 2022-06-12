@@ -25,7 +25,6 @@ modules:
       - /bin
 
   - name: imagemagick
-    buildsystem: cmake-ninja
     config-opts:
       - --enable-shared
       - --disable-static
