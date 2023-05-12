@@ -38,8 +38,8 @@ modules:
       - --with-tiff
     sources:
       - type: archive
-        url: https://github.com/ImageMagick/ImageMagick/archive/7.1.0-37.tar.gz
-        sha256: a54888a1a46dbb808705a3e6c6b5ecb93ee30189a8ae6ea0f02300a0ab0d0996
+        url: https://github.com/ImageMagick/ImageMagick/archive/7.1.1-8.tar.gz
+        sha256: cac2e4766f2cf1bd301b94ddcc86d6940d52190bfc1f31056eaa39e9cf2abe42
     cleanup:
       - /share/doc
 
