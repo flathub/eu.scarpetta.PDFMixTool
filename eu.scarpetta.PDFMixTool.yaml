@@ -1,6 +1,6 @@
 app-id: eu.scarpetta.PDFMixTool
 runtime: org.kde.Platform
-runtime-version: "5.15-21.08"
+runtime-version: "5.15-22.08"
 sdk: org.kde.Sdk
 command: pdfmixtool
 finish-args:
@@ -18,11 +18,30 @@ modules:
       - "make DESTDIR=$FLATPAK_DEST install"
     sources:
       - type: archive
-        url: https://github.com/qpdf/qpdf/releases/download/release-qpdf-10.3.2/qpdf-10.3.2.tar.gz
-        sha256: 062808c40ef8741ec8160ae00168638a712cfa1d4bf673e8e595ab5eba1da947
+        url: https://github.com/qpdf/qpdf/releases/download/release-qpdf-10.6.3/qpdf-10.6.3.tar.gz
+        sha256: e8fc23b2a584ea68c963a897515d3eb3129186741dd19d13c86d31fa33493811
     cleanup:
       - /include
       - /bin
+
+  - name: imagemagick
+    config-opts:
+      - --enable-shared
+      - --disable-static
+      - --with-modules
+      - --with-x
+      - --with-threads
+      - --with-magick_plus_plus
+      - --with-png
+      - --with-jpg
+      - --with-gif
+      - --with-tiff
+    sources:
+      - type: archive
+        url: https://github.com/ImageMagick/ImageMagick/archive/7.1.1-8.tar.gz
+        sha256: cac2e4766f2cf1bd301b94ddcc86d6940d52190bfc1f31056eaa39e9cf2abe42
+    cleanup:
+      - /share/doc
 
   - name: pdfmixtool
     buildsystem: cmake-ninja
@@ -30,5 +49,5 @@ modules:
       - -DCMAKE_BUILD_TYPE=Release
     sources:
       - type: archive
-        url: https://gitlab.com/scarpetta/pdfmixtool/-/archive/v1.0.1/pdfmixtool-v1.0.1.tar.gz
-        sha256: 0d6f95ca45e640e1cbe7259962c4735658ae761ecb3e7d8b08d55b8457ef08e6
+        url: https://gitlab.com/scarpetta/pdfmixtool/-/archive/v1.1.1/pdfmixtool-v1.1.1.tar.gz
+        sha256: 13fe771e8bb724d77a888443b3c6196cb9f81a6de5ef41351a111123e848e267
