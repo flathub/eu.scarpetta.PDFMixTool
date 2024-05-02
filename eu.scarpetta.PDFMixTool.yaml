@@ -1,6 +1,6 @@
 app-id: eu.scarpetta.PDFMixTool
 runtime: org.kde.Platform
-runtime-version: "5.15-22.08"
+runtime-version: "5.15-23.08"
 sdk: org.kde.Sdk
 command: pdfmixtool
 finish-args:
@@ -11,11 +11,7 @@ finish-args:
   - --filesystem=host
 modules:
   - name: qpdf
-    buildsystem: simple
-    build-commands:
-      - "./configure --prefix=/ --disable-static"
-      - "make -j $FLATPAK_BUILDER_N_JOBS"
-      - "make DESTDIR=$FLATPAK_DEST install"
+    buildsystem: autotools
     sources:
       - type: archive
         url: https://github.com/qpdf/qpdf/releases/download/release-qpdf-10.6.3/qpdf-10.6.3.tar.gz
