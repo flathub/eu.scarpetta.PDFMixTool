@@ -1,6 +1,6 @@
 app-id: eu.scarpetta.PDFMixTool
 runtime: org.kde.Platform
-runtime-version: "5.15-23.08"
+runtime-version: "5.15-24.08"
 sdk: org.kde.Sdk
 command: pdfmixtool
 finish-args:
@@ -34,8 +34,8 @@ modules:
       - --with-tiff
     sources:
       - type: archive
-        url: https://github.com/ImageMagick/ImageMagick/archive/7.1.1-8.tar.gz
-        sha256: cac2e4766f2cf1bd301b94ddcc86d6940d52190bfc1f31056eaa39e9cf2abe42
+        url: https://github.com/ImageMagick/ImageMagick/archive/7.1.1-43.tar.gz
+        sha256: ceb972266b23dc7c1cfce0da5a7f0c9acfb4dc81f40eb542a49476fedbc2618f
     cleanup:
       - /share/doc
 
@@ -47,3 +47,5 @@ modules:
       - type: archive
         url: https://gitlab.com/scarpetta/pdfmixtool/-/archive/v1.1.1/pdfmixtool-v1.1.1.tar.gz
         sha256: 13fe771e8bb724d77a888443b3c6196cb9f81a6de5ef41351a111123e848e267
+      - type: patch
+        path: patches/pdfmixtool-magick++-fix.patch
