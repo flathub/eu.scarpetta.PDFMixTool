@@ -1,6 +1,6 @@
 app-id: eu.scarpetta.PDFMixTool
 runtime: org.kde.Platform
-runtime-version: "5.15-25.08"
+runtime-version: "6.10"
 sdk: org.kde.Sdk
 command: pdfmixtool
 finish-args:
@@ -9,16 +9,44 @@ finish-args:
   - --socket=wayland
   - --device=dri
   - --filesystem=host
+cleanup:
+  - /include
+  - /lib/cmake
+  - /lib/pkgconfig
+  - /share/man
+  - '*.a'
 modules:
   - name: qpdf
-    buildsystem: autotools
+    buildsystem: cmake-ninja
+    builddir: true
+    config-opts:
+      - -DCMAKE_BUILD_TYPE=RelWithDebInfo
     sources:
       - type: archive
-        url: https://github.com/qpdf/qpdf/releases/download/release-qpdf-10.6.3/qpdf-10.6.3.tar.gz
-        sha256: e8fc23b2a584ea68c963a897515d3eb3129186741dd19d13c86d31fa33493811
+        url: https://github.com/qpdf/qpdf/releases/download/v12.2.0/qpdf-12.2.0.tar.gz
+        sha256: b3d1575b2218badc3549d6977524bb0f8c468c6528eebc8967bbe3078cf2cace
     cleanup:
       - /include
       - /bin
+      - /share/doc
+
+  - name: poppler
+    buildsystem: cmake-ninja
+    config-opts:
+      - -DENABLE_UTILS=OFF
+      - -DENABLE_CPP=OFF
+      - -DENABLE_QT5=OFF
+      - -DENABLE_QT6=ON
+      - -DENABLE_BOOST=OFF
+    sources:
+      - url: https://poppler.freedesktop.org/poppler-25.12.0.tar.xz
+        sha256: c18b40eb36b1a0c5b86e29ca054bf0770304583da4f2cdd42fe86eca6a20de48
+        type: archive
+        x-checker-data:
+          type: anitya
+          project-id: 3686
+          stable-only: true
+          url-template: https://poppler.freedesktop.org/poppler-$version.tar.xz
 
   - name: imagemagick
     config-opts:
@@ -45,7 +73,7 @@ modules:
       - -DCMAKE_BUILD_TYPE=Release
     sources:
       - type: archive
-        url: https://gitlab.com/scarpetta/pdfmixtool/-/archive/v1.1.1/pdfmixtool-v1.1.1.tar.gz
-        sha256: 13fe771e8bb724d77a888443b3c6196cb9f81a6de5ef41351a111123e848e267
+        url: https://gitlab.com/scarpetta/pdfmixtool/-/archive/v1.2.1/pdfmixtool-v1.2.1.tar.gz
+        sha256: 0ea40d4d850f7dcc254ab02ec27544ad0c8f411a16f1faeb4503e447a4ea034d
       - type: patch
         path: patches/pdfmixtool-magick++-fix.patch
