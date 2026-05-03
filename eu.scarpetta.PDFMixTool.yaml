@@ -1,6 +1,6 @@
 app-id: eu.scarpetta.PDFMixTool
 runtime: org.kde.Platform
-runtime-version: "6.10"
+runtime-version: '6.10'
 sdk: org.kde.Sdk
 command: pdfmixtool
 finish-args:
@@ -39,8 +39,8 @@ modules:
       - -DENABLE_QT6=ON
       - -DENABLE_BOOST=OFF
     sources:
-      - url: https://poppler.freedesktop.org/poppler-25.12.0.tar.xz
-        sha256: c18b40eb36b1a0c5b86e29ca054bf0770304583da4f2cdd42fe86eca6a20de48
+      - url: https://poppler.freedesktop.org/poppler-26.05.0.tar.xz
+        sha256: 6fef27ff04f37db43054c86bcdff6128c9fb1f6af4ef3c8b369a7e9abd68d0bb
         type: archive
         x-checker-data:
           type: anitya
